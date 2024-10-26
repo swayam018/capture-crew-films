@@ -7,13 +7,15 @@ import agami from '../public/images/agami.jpg';
 
 function HeroSection() {
   return (
-    <div className=' w-full h-full max-h-full'>
+    <div className=' w-full max-h-screen'>
       <Header />
-      <Image src={coupleimage} fill alt='Couple image' objectFit='cover' />
+      <div className=' w-full h-screen max-h-screen'>
+      <Image src={coupleimage} alt='Couple image' style={{objectFit:"contain"}}   /> 
+      </div>
       <div className="absolute inset-0 bg-black bg-opacity-25" />
       <div
         className="absolute inset-0 opacity-50 mix-blend-overlay">
-        <svg viewBox="0 0 200 200">
+        <svg viewBox="0 0 460 200">
           <filter id='noiseFilter'>
             <feTurbulence
               type='fractalNoise'
